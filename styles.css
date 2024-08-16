@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: #007bff;
+    background-image: url(./images/authentication.png);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.circle:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.scanner {
+    width: 100px;
+    height: 100px;
+    border: 6px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.active .scanner-circle {
+    width: 100px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scan 1s infinite alternate linear;
+    opacity: 0;
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        top: 50%;
+        opacity: 0.8;
+    }
+    100% {
+        top: 100%;
+        opacity: 0.9;
+    }
+}
+
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: white;
+    width: 100px;
+    transition: width 2s linear;
+}
+/* certificate */
+.certificate-container {
+    font-weight: 400;
+    font-style: normal;
+    border: 15px solid #8b0000;
+    padding: 30px;
+    background-color: #222222;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.certificate h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #8b0000;
+}
+
+.certificate p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.certificate p.and {
+    font-family: "Mrs Saint Delafield", cursive;
+}
+.certificate h2 {
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.certificate h3 {
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+.witnesses {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.signature {
+    text-align: center;
+    width: 45%;
+}
+.signatures img{
+    max-width: 40px;
+    border-bottom: 1px dotted;
+}
+.officiant {
+    text-align: center;
+    margin-top: 20px;
+}

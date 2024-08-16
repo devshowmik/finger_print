@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Certificate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="certificate-container">
+        <div class="certificate">
+            <h1>Marriage Certificate</h1>
+            <p>This is to certify that</p>
+            <h2 id="groom-name">You</h2>
+            <p class="and">&</p>
+            <h2 id="bride-name">Me</h2>
+            <p>were united in marriage on</p>
+            <h3 id="wedding-date">[Date of Marriage]</h3>
+            <!-- <p>at</p>
+            <h3 id="location">[Location of Marriage]</h3>
+            <p>in the presence of the undersigned witnesses:</p> -->
+            <!-- <div class="witnesses">
+                <p>____________________________</p>
+                <p>Witness 1</p>
+                <p>____________________________</p>
+                <p>Witness 2</p>
+            </div> -->
+            <div class="signatures">
+                <div class="signature">
+                    <p><img src="./images/you.png" alt=""></p>
+                    <p>Yours Signature</p>
+                </div>
+                <div class="signature">
+                    <p><img src="./images/me.png" alt=""></p>
+                    <p>Mine Signature</p>
+                </div>
+            </div>
+            <div class="officiant">
+                <p><img src="./images/Showmik-300x176.png" alt="" width="100"></p>
+                <p>Officiant's Signature</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript to insert the current date
+        const dateElement = document.getElementById('wedding-date');
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
+    </script>
+</body>
+</html>
